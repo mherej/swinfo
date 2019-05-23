@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SharpTrooper.Entities.Specie>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.eye_colors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skin_colors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.classification)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.average_height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.average_lifespane)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hair_colors)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homeworld)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eye_colors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.skin_colors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edited)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.classification)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.average_height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.average_lifespane)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hair_colors)
+        </td>
+
+    </tr>
+}
+
+</table>
